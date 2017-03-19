@@ -38,8 +38,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api.cs" />
-    <Compile Include="Extension\EnumerableExtensions.cs" />
-    <Compile Include="Extension\UriBuilderExtension.cs" />
     <Compile Include="Model\ApiSegment.cs" />
     <Compile Include="Model\UriScheme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
