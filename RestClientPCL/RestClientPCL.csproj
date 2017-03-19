@@ -39,6 +39,7 @@
   <ItemGroup>
     <Compile Include="Api.cs" />
     <Compile Include="Model\ApiSegment.cs" />
+    <Compile Include="Model\IApiSegment.cs" />
     <Compile Include="Model\UriScheme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

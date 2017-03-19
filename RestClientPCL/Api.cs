@@ -17,7 +17,7 @@
 
         public int Port { get; set; }
 
-        public async Task<string> SendTask(ApiSegment segment, HttpClientHandler handler = null)
+        public async Task<string> SendTask(IApiSegment segment, HttpClientHandler handler = null)
         {
             HttpResponseMessage responseMessage = await GetResponseTask(segment, handler);
 
@@ -30,7 +30,7 @@
             return result;
         }
 
-        public async Task<HttpResponseMessage> GetResponseTask(ApiSegment segment, HttpClientHandler handler = null)
+        public async Task<HttpResponseMessage> GetResponseTask(IApiSegment segment, HttpClientHandler handler = null)
         {
             if (handler == null)
             {
@@ -62,7 +62,7 @@
             return responseMessage;
         }
 
-        private Uri BuildUri(ApiSegment segment)
+        private Uri BuildUri(IApiSegment segment)
         {
             StringBuilder stringBuilder = new StringBuilder();
             foreach (var parameter in segment.Parameters)

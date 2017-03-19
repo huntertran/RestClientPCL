@@ -3,7 +3,7 @@
     using System.Net.Http;
     using System.Collections.Generic;
 
-    public class ApiSegment
+    public class ApiSegment : IApiSegment
     {
         public string Name { get; set; }
 
@@ -11,10 +11,10 @@
 
         public string UrlSegment { get; set; }
 
-        public Dictionary<string, string> Headers { get; set; } = new Dictionary<string, string>();
+        public IDictionary<string, string> Headers { get; set; } = new Dictionary<string, string>();
 
-        public Dictionary<string, string> Parameters { get; set; } = new Dictionary<string, string>();
+        public IDictionary<string, string> Parameters { get; set; } = new Dictionary<string, string>();
 
-        public Dictionary<string, string> FormUrlEncodedContents { get; set; } = new Dictionary<string, string>();
+        public IDictionary<string, string> FormUrlEncodedContents { get; set; } = new Dictionary<string, string>();
     }
 }
