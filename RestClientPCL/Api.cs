@@ -17,7 +17,7 @@
 
         public int Port { get; set; }
 
-        public async Task<string> SendAsync(ApiSegment segment, HttpClientHandler handler = null)
+        public async Task<string> SendTask(ApiSegment segment, HttpClientHandler handler = null)
         {
             HttpResponseMessage responseMessage = await GetResponseTask(segment, handler);
 
@@ -52,7 +52,10 @@
                 }
             }
 
-            requestMessage.Content = new FormUrlEncodedContent(segment.Parameters);
+            if (segment.FormUrlEncodedContents.Any())
+            {
+                requestMessage.Content = new FormUrlEncodedContent(segment.FormUrlEncodedContents);
+            }
 
             HttpResponseMessage responseMessage = await httpClient.SendAsync(requestMessage).ConfigureAwait(false);
 
@@ -67,13 +70,20 @@
                 stringBuilder.Append(parameter.Key);
                 stringBuilder.Append('=');
                 stringBuilder.Append(parameter.Value);
+                stringBuilder.Append('&');
             }
-            UriBuilder uriBuilder = new UriBuilder(
-                Scheme.ToString(), 
-                BaseUrl, 
-                Port, 
-                segment.UrlSegment,
-                stringBuilder.ToString());
+            UriBuilder uriBuilder = new UriBuilder
+            {
+                Scheme = Scheme.ToString(),
+                Host = BaseUrl,
+                Path = segment.UrlSegment,
+                Query = stringBuilder.ToString().TrimEnd('&')
+            };
+            if (Port != 0)
+            {
+                uriBuilder.Port = Port;
+            }
+            
             return uriBuilder.Uri;
         }
 
