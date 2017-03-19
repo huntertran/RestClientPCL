@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>RestClientPCL</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>coding4food</authors>
+    <owners>coding4food</owners>
+    <licenseUrl>https://github.com/cuoilennaocacban/RestClientPCL</licenseUrl>
+    <projectUrl>https://github.com/cuoilennaocacban/RestClientPCL</projectUrl>
+    <iconUrl>https://github.com/cuoilennaocacban/RestClientPCL/raw/master/restclient%20icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A Portable Class Library for rest consuming</description>
+    <releaseNotes>Init release</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>rest restful api restsharp</tags>
+  </metadata>
+</package>
