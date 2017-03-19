@@ -1,6 +1,6 @@
 ﻿namespace RestClientPCL.Model
 {
-    public enum Protocol
+    public enum UriScheme
     {
         Http,
         Https
