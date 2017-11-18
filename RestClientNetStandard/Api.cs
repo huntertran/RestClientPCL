@@ -9,6 +9,9 @@
     using System.Text;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// The main class that you will use to make request
+    /// </summary>
     public class Api
     {
         /// <summary>
