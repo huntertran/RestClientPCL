@@ -1,9 +1,9 @@
 ﻿namespace RestClientPCL.Test
 {
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Model;
     using System.Net.Http;
     using System.Threading.Tasks;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
     public class ApiTest

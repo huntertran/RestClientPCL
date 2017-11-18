@@ -1,7 +1,7 @@
 ﻿namespace RestClientPCL.Model
 {
-    using System.Net.Http;
     using System.Collections.Generic;
+    using System.Net.Http;
 
     public class ApiSegment : IApiSegment
     {
