@@ -2,6 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>RestClientPCL</PackageId>
+    <PackageVersion>2.0.0</PackageVersion>
+    <Authors>coding4food</Authors>
+    <Description>A Portable Class Library for rest consuming</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Support .NET Standard 2.0</PackageReleaseNotes>
+    <Copyright>Copyright 2017 (c) coding4food. All rights reserved.</Copyright>
+    <PackageTags>rest restful restsharp api</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\RestClientNetStandard.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>
