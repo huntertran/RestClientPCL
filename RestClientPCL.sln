@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestClientPCL", "RestClientPCL\RestClientPCL.csproj", "{EE02E3D4-E62D-451A-97A3-5A344FFB3B8F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestClientPCL.Test", "RestClientPCL.Test\RestClientPCL.Test.csproj", "{5384CF9B-3022-4A88-8E7E-EF8C81D91D28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestClientNetStandard", "RestClientNetStandard\RestClientNetStandard.csproj", "{85B70DCF-8A3D-4968-96F9-ED5A7B07BD77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,15 @@ Global
 		{5384CF9B-3022-4A88-8E7E-EF8C81D91D28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5384CF9B-3022-4A88-8E7E-EF8C81D91D28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5384CF9B-3022-4A88-8E7E-EF8C81D91D28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85B70DCF-8A3D-4968-96F9-ED5A7B07BD77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85B70DCF-8A3D-4968-96F9-ED5A7B07BD77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85B70DCF-8A3D-4968-96F9-ED5A7B07BD77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85B70DCF-8A3D-4968-96F9-ED5A7B07BD77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3F18394-86D5-4AA2-BF39-3215641C0463}
 	EndGlobalSection
 EndGlobal
