@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>RestClientPCL</PackageId>
-    <PackageVersion>2.0.0</PackageVersion>
+    <PackageVersion>2.1.0</PackageVersion>
     <Authors>coding4food</Authors>
     <Description>A Portable Class Library for rest consuming</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
