@@ -29,7 +29,7 @@
         IDictionary<string, string> Headers { get; set; }
 
         /// <summary>
-        /// List of the parameters
+        /// URL Parameters
         /// </summary>
         IDictionary<string, string> Parameters { get; set; }
 
@@ -37,5 +37,10 @@
         /// List of the url-encoded form contents
         /// </summary>
         IDictionary<string, string> FormUrlEncodedContents { get; set; }
+
+        /// <summary>
+        /// the raw request body
+        /// </summary>
+        string RequestBody { get; set; }
     }
 }

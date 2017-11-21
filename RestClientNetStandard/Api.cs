@@ -81,6 +81,11 @@
                 requestMessage.Content = new FormUrlEncodedContent(segment.FormUrlEncodedContents);
             }
 
+            if (!string.IsNullOrEmpty(segment.RequestBody))
+            {
+                requestMessage.Content = new StringContent(segment.RequestBody);
+            }
+
             HttpResponseMessage responseMessage = await httpClient.SendAsync(requestMessage).ConfigureAwait(false);
 
             return responseMessage;
