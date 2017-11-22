@@ -41,6 +41,6 @@
         /// <summary>
         /// raw string request body
         /// </summary>
-        public string RequestBody { get; set; }
+        public StringContent RequestBody { get; set; }
     }
 }

@@ -41,6 +41,6 @@
         /// <summary>
         /// the raw request body
         /// </summary>
-        string RequestBody { get; set; }
+        StringContent RequestBody { get; set; }
     }
 }
