@@ -76,15 +76,7 @@
                 }
             }
 
-            if (segment.FormUrlEncodedContents.Any())
-            {
-                requestMessage.Content = new FormUrlEncodedContent(segment.FormUrlEncodedContents);
-            }
-
-            if (segment.RequestBody != null)
-            {
-                requestMessage.Content = segment.RequestBody;
-            }
+            requestMessage.Content = segment.Content;
 
             HttpResponseMessage responseMessage = await httpClient.SendAsync(requestMessage).ConfigureAwait(false);
 

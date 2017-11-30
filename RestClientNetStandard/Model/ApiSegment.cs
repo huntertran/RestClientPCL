@@ -34,13 +34,8 @@
         public IDictionary<string, string> Parameters { get; set; } = new Dictionary<string, string>();
 
         /// <summary>
-        /// List of the url-encoded form contents
+        /// Request content
         /// </summary>
-        public IDictionary<string, string> FormUrlEncodedContents { get; set; } = new Dictionary<string, string>();
-
-        /// <summary>
-        /// raw string request body
-        /// </summary>
-        public StringContent RequestBody { get; set; }
+        public HttpContent Content { get; set; }
     }
 }

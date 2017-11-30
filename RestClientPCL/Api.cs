@@ -9,14 +9,32 @@
     using System.Text;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// The main class that you will use to make request
+    /// </summary>
     public class Api
     {
+        /// <summary>
+        /// Specify the scheme of request: Http or Https
+        /// </summary>
         public UriScheme Scheme { get; set; } = UriScheme.Http;
 
+        /// <summary>
+        /// Base URL. For example: maps.googleapis.com
+        /// </summary>
         public string BaseUrl { get; set; }
 
+        /// <summary>
+        /// Specify port if api have one
+        /// </summary>
         public int Port { get; set; }
 
+        /// <summary>
+        /// Send the request, return string
+        /// </summary>
+        /// <param name="segment">UrlSegment = "/maps/api/geocode/json", Method = HttpMethod.Get</param>
+        /// <param name="handler">null as default</param>
+        /// <returns></returns>
         public async Task<string> SendTask(IApiSegment segment, HttpClientHandler handler = null)
         {
             HttpResponseMessage responseMessage = await GetResponseTask(segment, handler);
@@ -30,6 +48,12 @@
             return result;
         }
 
+        /// <summary>
+        /// Send the request, return HttpResponseMessage
+        /// </summary>
+        /// <param name="segment">UrlSegment = "/maps/api/geocode/json", Method = HttpMethod.Get</param>
+        /// <param name="handler">null as default</param>
+        /// <returns></returns>
         public async Task<HttpResponseMessage> GetResponseTask(IApiSegment segment, HttpClientHandler handler = null)
         {
             if (handler == null)
@@ -52,10 +76,7 @@
                 }
             }
 
-            if (segment.FormUrlEncodedContents.Any())
-            {
-                requestMessage.Content = new FormUrlEncodedContent(segment.FormUrlEncodedContents);
-            }
+            requestMessage.Content = segment.Content;
 
             HttpResponseMessage responseMessage = await httpClient.SendAsync(requestMessage).ConfigureAwait(false);
 
